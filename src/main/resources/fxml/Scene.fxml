@@ -34,7 +34,7 @@
                   <MenuButton fx:id="txtLanguage" mnemonicParsing="false" text="Language">
                     <items>
                       <MenuItem mnemonicParsing="false" text="English" />
-                      <MenuItem mnemonicParsing="false" text="Italiano" />
+                      <MenuItem mnemonicParsing="false" text="Italian" />
                     </items>
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
