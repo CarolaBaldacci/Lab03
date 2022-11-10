@@ -18,7 +18,7 @@ public class Dictionary {
 	}
 
 	public boolean loadDictionary(String language) {
-		if(this.language.equals(language)){
+		if(dizionario!=null && this.language.equals(language)){
 			return true;
 		}
 		
@@ -27,7 +27,7 @@ public class Dictionary {
 		
 		try {
 			
-			FileReader fr= new FileReader(this.language+".txt");
+			FileReader fr= new FileReader("src/main/resources/"+language+".txt");
 			BufferedReader br= new BufferedReader(fr);
 			String word;
 			while((word = br.readLine())!=null) {
@@ -35,8 +35,9 @@ public class Dictionary {
 			}
 			
 			Collections.sort(dizionario);
-			System.out.println("Dizionario " + language + " loaded. Found " + dizionario.size() + " words.");
 			br.close();
+			System.out.println("Dizionario " + language + " loaded. Found " + dizionario.size() + " words.");
+			
 			return true;
 			
 			
